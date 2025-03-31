@@ -1,0 +1,11 @@
+export { default as Navbar } from "./Navbar";
+export { default as ModalMenu } from "./ModalMenu";
+export { default as Head } from "./Head";
+export { default as Search } from "./Search";
+export { default as LatesTraillers } from "./LatesTraillers";
+export { default as Trending } from "./Trending";
+export { default as WhatsPopular } from "./WhatsPopular";
+export { default as Footer } from "./Footer";
+export { default as Layout } from "./Layout";
+export { default as Filter } from "./Filter";
+export { default as Movies } from "./Movies";
