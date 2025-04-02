@@ -18,11 +18,11 @@ const RelDate = () => {
         </div>
       </div>
       <div className={`${style.flexBetween} gap-2`}>
-        <span className="text-gray-400">from</span>
+        <span className="text-gray-400">to</span>
         <div className={``}>
           <input
             type="text"
-            placeholder="09/13/2025"
+            value={`${new Date()}`}
             className={`border border-gray-400 outline-none rounded-md p-2 active::border-movieTitle`}
           />
           <button>

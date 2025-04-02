@@ -6,47 +6,18 @@ import Sort from "./Sort";
 import ShowMe from "./ShowMe";
 import ReleaseDate from "./ReleaseDate";
 import Genres from "./Genres";
+import Language from "./Language";
+import Btn from "./Btn";
 
 const Filter = () => {
-  const [key, setKey] = useState<string>("");
-  const [movieData, setMovieData] = useState<any>(null);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const currentHash = window.location.hash;
-      setKey(currentHash);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (key) {
-      const url = `https://api.themoviedb.org/3/movie/${key.slice(
-        1
-      )}?language=en-US&page=1`;
-      const option = {
-        method: "GET",
-        headers: {
-          accept: "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NWY0Y2NiMjMzMjNlMmY2ZmYzYTljNTIxNzAxYTRlZSIsIm5iZiI6MTcxNTkyNTcxMi42NDEsInN1YiI6IjY2NDZmMmQwZjZkOGFjYzZlM2UwODk5MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gELWP81lEi8krrjWptEs1ld-N36Y4johvr04wp_kFls",
-        },
-      };
-
-      axios(url, option)
-        .then((response) => {
-          setMovieData(response.data);
-        })
-        .catch((error) => {
-          console.error(error.message);
-        });
-    }
-  }, [key]);
+  const [hidden, setHidden] = useState<boolean>(false);
 
   return (
     <div className={`sm:w-[23%] w-full bg-white`}>
       <Sort />
       <div className={`shadow-md border-2 rounded-md mt-5`}>
         <button
+          onClick={() => setHidden((i) => !i)}
           className={`font-semibold text-md w-full text-start p-4 ${style.flexBetween}`}
         >
           <span>Filter</span>
@@ -60,12 +31,18 @@ const Filter = () => {
             }}
           ></span>
         </button>
-        <div>
+        <div className={`${hidden ? "hidden" : "block"}`}>
           <ShowMe />
           <ReleaseDate />
           <Genres />
+          <p className="p-4 border text-gray-800">Certification</p>
+          <Language />
         </div>
       </div>
+      <Btn
+        newClass="w-full bg-movieTitle text-white hover:bg-darkBlue !py-2 font-bold mt-3"
+        title="Search"
+      />
     </div>
   );
 };

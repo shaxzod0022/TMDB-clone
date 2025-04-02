@@ -272,3 +272,46 @@ export const releaseDate = [
     checked: true,
   },
 ];
+
+export const language = [
+  {
+    id: 1,
+    title: "German",
+    checked: true,
+  },
+  {
+    id: 2,
+    title: "Russian",
+    checked: true,
+  },
+  {
+    id: 3,
+    title: "Uzb",
+    checked: true,
+  },
+  {
+    id: 4,
+    title: "English",
+    checked: true,
+  },
+  {
+    id: 5,
+    title: "China",
+    checked: true,
+  },
+  {
+    id: 6,
+    title: "Korean",
+    checked: true,
+  },
+  {
+    id: 7,
+    title: "Turkish",
+    checked: true,
+  },
+  {
+    id: 8,
+    title: "Spanish",
+    checked: true,
+  },
+];

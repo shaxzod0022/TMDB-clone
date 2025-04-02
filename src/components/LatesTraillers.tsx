@@ -4,6 +4,7 @@ import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import { EllipsisHorizontalIcon } from "@heroicons/react/24/solid";
 import TrailerModal from "./TrailerModal";
+import Image from "next/image";
 
 interface MovieData {
   id: number;
@@ -104,10 +105,12 @@ const LatesTraillers = () => {
               onMouseOver={() => setHoverMovie(item.backdrop_path)}
             >
               <div className="w-full max-h-[170px] h-full relative">
-                <img
+                <Image
                   src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
                   alt={item.original_name}
                   className="w-full h-full object-cover rounded-lg"
+                  width={100}
+                  height={50}
                 />
                 <button
                   onClick={() =>

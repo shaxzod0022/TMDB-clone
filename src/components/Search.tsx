@@ -1,4 +1,5 @@
 import { style } from "@/util/style";
+import Image from "next/image";
 import React from "react";
 
 const Search = () => {
@@ -7,7 +8,7 @@ const Search = () => {
       className={`mt-[70px] w-full ${style.flex} gap-4 lg:px-[140px] border-b-2 border-black py-2 px-5`}
     >
       <span>
-        <img
+        <Image
           src="/assets/glyphicons-basic-28-search-blue-177462d06db81ff2a02aa022c1c0be5ba4200d7bd3f51091ed9298980e3a26a1.svg"
           alt="search"
           width={30}

@@ -4,6 +4,7 @@ import { EllipsisHorizontalIcon } from "@heroicons/react/24/solid";
 import axios from "axios";
 import { usePathname } from "next/navigation";
 import path from "path";
+import Image from "next/image";
 interface MovieData {
   id: number;
   original_title: string;
@@ -63,10 +64,12 @@ const AllMovies = () => {
             className="flex-shrink-0 sm:w-[169px] w-full flex sm:flex-col flex-row cursor-pointer border-2 rounded-lg shadow-md"
           >
             <div className="sm:w-full w-[60%] max-h-[250px] sm:h-full h-[180px] relative">
-              <img
+              <Image
                 src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                 alt={item.original_title}
                 className="w-full h-full object-cover rounded-lg"
+                width={100}
+                height={50}
               />
               <span className="absolute sm:flex hidden w-11 h-11 justify-center items-center -bottom-[21px] left-3 rounded-full p-2 bg-darkBlue text-white">
                 {Math.floor(item.vote_average * 10)}%

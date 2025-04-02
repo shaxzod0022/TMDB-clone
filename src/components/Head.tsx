@@ -1,10 +1,12 @@
 "use client";
 import { style } from "@/util/style";
 import axios from "axios";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Head = () => {
   const [movieImg, setMovieImg] = useState<string>("");
+  const pathname = usePathname();
   const url =
     "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc";
   const options = {
@@ -35,9 +37,11 @@ const Head = () => {
       console.error("Xatolik yuz berdi:", error);
     }
   };
+
   useEffect(() => {
     getData();
-  }, []);
+  }, [pathname]);
+
   return (
     <div
       className={`${style.flexColumn} gap-4 items-start w-full xl:w-[85%] md:py-32 py-20 md:px-10 px-6 mx-auto`}

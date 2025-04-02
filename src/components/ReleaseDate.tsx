@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import { releaseDate } from "@/util/constants";
 import RelDate from "./RelDate";
+
 const ReleaseDate = () => {
   const [check, setCheck] = useState(releaseDate);
 

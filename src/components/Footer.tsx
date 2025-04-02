@@ -3,6 +3,7 @@ import { footerlinks } from "@/util/constants";
 import { style } from "@/util/style";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -10,10 +11,11 @@ const Footer = () => {
       className={`relative w-full bg-darkBlue flex flex-wrap gap-10 !items-start md:py-10 py-10 !pb-14 px-10 sm:justify-center justify-start`}
     >
       <div className={`${style.flexColumn} md:gap-10 gap-5 items-start`}>
-        <img
+        <Image
           src="/assets/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b (1).svg"
           alt="TMDB logo"
           width={100}
+          height={50}
         />
         <button
           className={`bg-white text-movieTitle rounded-md px-6 py-2 text-lg font-bold`}

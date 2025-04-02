@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import ModalMenu from "./ModalMenu";
 import { usePathname } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 const Navbar = () => {
   const [language, setLanguage] = useState<string>("EN");
@@ -60,7 +61,7 @@ const Navbar = () => {
       <div className={`${style.flexBetween} gap-8`}>
         <div>
           <Link href={`/`}>
-            <img
+            <Image
               src="/assets/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
               alt="TMBD logo"
               width={154}
@@ -103,7 +104,7 @@ const Navbar = () => {
         <ul className={`${style.flexBetween} sm:gap-8 gap-4`}>
           <li className="sm:block hidden">
             <button>
-              <img
+              <Image
                 src="/assets/glyphicons-basic-371-plus-white-0bac34f16124808a12ea863b4d9cc6e599dee7c0a80658cfe9ead26939e64517.svg"
                 alt="plus"
                 width={30}
@@ -121,7 +122,7 @@ const Navbar = () => {
           </li>
           <li className="sm:block hidden">
             <button>
-              <img
+              <Image
                 src="/assets/glyphicons-basic-441-bell-9cd2af257b98c4af3460078777d8e38a5e12bca89704eeac2f39273afcbd06ff.svg"
                 alt="tmbd"
                 width={30}
@@ -134,7 +135,7 @@ const Navbar = () => {
           </li>
           <li>
             <button className="text-white">
-              <img
+              <Image
                 src="/assets/glyphicons-basic-28-search-blue-177462d06db81ff2a02aa022c1c0be5ba4200d7bd3f51091ed9298980e3a26a1.svg"
                 alt="search"
                 width={30}
