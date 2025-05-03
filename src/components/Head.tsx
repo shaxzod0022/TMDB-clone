@@ -53,7 +53,7 @@ const Head = () => {
       }}
     >
       <h1 className="gradient text-5xl font-bold">
-        That's a <br /> Wrap 2024
+        Thats a <br /> Wrap 2024
       </h1>
       <p className="text-white">The best (and worst) of the year from TMDB.</p>
       <button className="border-2 border-white rounded-3xl px-3.5 hover:bg-white transition-all duration-100 active:bg-slate-400 hover:text-darkBlue text-white pb-0.5">
