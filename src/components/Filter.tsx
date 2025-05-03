@@ -1,7 +1,6 @@
 "use client";
 import { style } from "@/util/style";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Sort from "./Sort";
 import ShowMe from "./ShowMe";
 import ReleaseDate from "./ReleaseDate";
