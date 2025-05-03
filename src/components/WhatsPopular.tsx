@@ -59,7 +59,7 @@ const WhatsPopular = () => {
   return (
     <div className="w-full xl:px-36 lg:px-12 sm:p-5 sm:px-0 sm:pb-0 pb-0 pt-5">
       <div className={`${style.flex} gap-4 mb-4 sm:pl-10 pl-5`}>
-        <h2 className={`${style.h2}`}>What's Popular</h2>
+        <h2 className={`${style.h2}`}>Whats Popular</h2>
         <ul className="relative flex items-center border-darkBlue border-2 rounded-3xl">
           <span
             className="absolute z-10 h-full bg-darkBlue rounded-3xl transition-all duration-300"
